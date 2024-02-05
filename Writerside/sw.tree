@@ -4,8 +4,9 @@
 
 <instance-profile id="sw"
                  name="Samuel Wakoli"
-                 start-page="Resume.md">
+                 start-page="Bio.md">
 
+    <toc-element topic="Bio.md"/>
     <toc-element topic="Resume.md"/>
     <toc-element topic="Certifications.md"/>
     <toc-element topic="Projects.md"/>
