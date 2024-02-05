@@ -1,3 +1,2 @@
 # Projects
 
-Start typing here...

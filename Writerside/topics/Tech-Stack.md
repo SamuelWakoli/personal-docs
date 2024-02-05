@@ -1,3 +1,2 @@
 # Tech Stack
 
-Start typing here...
