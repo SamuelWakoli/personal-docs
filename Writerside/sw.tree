@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="sw"
+                 name="Samuel Wakoli"
+                 start-page="Resume.md">
+
+    <toc-element topic="Resume.md"/>
+    <toc-element topic="Certifications.md"/>
+    <toc-element topic="Projects.md"/>
+    <toc-element topic="Tech-Stack.md"/>
+</instance-profile>

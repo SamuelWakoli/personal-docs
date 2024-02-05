@@ -8,6 +8,10 @@
     -->
     <rule id="46856586">
         <description>Created after removal of "Samuel Wakoli" from Help Instance</description>
-        <accepts>Samuel-Wakoli.html</accepts>
+        <accepts>Resume.html</accepts>
+    </rule>
+    <rule id="377b00f0">
+        <description>Created after removal of "This is the first topic" from Help Instance</description>
+        <accepts>Default-topic.html</accepts>
     </rule>
 </rules>
