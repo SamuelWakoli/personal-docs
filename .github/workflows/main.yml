@@ -20,6 +20,7 @@ env:
   # Docker image version
   DOCKER_VERSION: 232.10275
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,16 +32,16 @@ jobs:
       - name: Build Writerside docs using Docker
         uses: JetBrains/writerside-github-action@v4
         with:
-          instance: Writerside/sw
-          artifact: webHelpSW2-all.zip
-          docker-version: 233.14272
-
+          instance: ${{ env.INSTANCE }}
+          artifact: ${{ env.ARTIFACT }}
+          docker-version: ${{ env.DOCKER_VERSION }}
+        
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: docs
           path: |
-            artifacts/webHelpSW2-all.zip
+            artifacts/${{ env.ARTIFACT }}
           retention-days: 7
 
   deploy:
@@ -58,16 +59,16 @@ jobs:
           name: docs
 
       - name: Unzip artifact
-        run: unzip -O UTF-8 -qq webHelpSW2-all.zip -d dir
+        run: unzip -O UTF-8 -qq ${{ env.ARTIFACT }} -d dir
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
-
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: dir
-
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
